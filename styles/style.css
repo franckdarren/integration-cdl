@@ -130,7 +130,7 @@ input {
 }
 
 input:checked~.nav-btn-group {
-    transform: translateX(0);
+    opacity: 1;
 }
 
 input:checked~.navbar-toggler .bar:nth-child(1) {
@@ -160,21 +160,16 @@ input:checked~.navbar-toggler .bar:nth-child(3) {
         padding: 0 10px;
     }
 
-    .row {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .titre {
-        font-size: 30px;
-        text-align: center;
-    }
-
     .card {
         background-color: white;
         width: 80%;
         height: 230px;
         margin: 0 auto;
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 
     .card-footer {
@@ -193,10 +188,19 @@ input:checked~.navbar-toggler .bar:nth-child(3) {
         width: auto;
         top: 100px;
         right: 5px;
-        transform: translateX(300%);
+        opacity: 0;
         z-index: 1;
         height: 50px;
         transition: 0.6s;
+    }
+
+    .titre {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    button {
+        display: none;
     }
 }
 
